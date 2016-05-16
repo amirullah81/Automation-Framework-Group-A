@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Automation-Framework-Group-A.iml" filepath="$PROJECT_DIR$/Automation-Framework-Group-A.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Facebook/Facebook.iml" filepath="$PROJECT_DIR$/Facebook/Facebook.iml" />
       <module fileurl="file://$PROJECT_DIR$/Generic/Generic.iml" filepath="$PROJECT_DIR$/Generic/Generic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Healthfirst/Healthfirst.iml" filepath="$PROJECT_DIR$/Healthfirst/Healthfirst.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Levi/Levi.iml" filepath="$PROJECT_DIR$/Levi/Levi.iml" />
     </modules>
   </component>
 </project>

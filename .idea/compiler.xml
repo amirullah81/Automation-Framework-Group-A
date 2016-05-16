@@ -22,12 +22,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="Facebook" />
         <module name="Generic" />
+        <module name="Healthfirst" />
+        <module name="Levi" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Automation-Framework-Group-A" target="1.5" />
+      <module name="Facebook" target="1.8" />
       <module name="Generic" target="1.5" />
+      <module name="Healthfirst" target="1.8" />
+      <module name="Levi" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
