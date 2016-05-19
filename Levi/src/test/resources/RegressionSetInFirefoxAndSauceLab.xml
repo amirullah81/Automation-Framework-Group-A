@@ -3,9 +3,9 @@
 <suite name="Levi App running on firefox Browser">
 
 
-    <parameter name="usecloud" value="false"/>
-    <parameter name="userName" value="rahmanww"/>
-    <parameter name="accessKey" value="6f132866-de72-43fd-b49a-e6f81d26bfe3"/>
+    <parameter name="usecloud" value="true"/>
+    <parameter name="userName" value="limontest9"/>
+    <parameter name="accessKey" value="efc01db3-c9ce-48d0-9d45-12b43aed06c0"/>
     <parameter name="os" value="Windows 10"/>
     <parameter name="url" value="http://www.levi.com/US/en_US/"/>
     <parameter name="browserName" value="firefox"/>
@@ -14,9 +14,9 @@
     <test name="Home Page">
         <classes>
             <class name="Regression_Suite.LoginAndLogout"/>
-            <class name="Regression_Suite.SearchByAnyUser"/>
+           <!-- <class name="Regression_Suite.SearchByAnyUser"/>
             <class name="Regression_Suite.SearchByRagisteredUser"/>
-            <class name="Regression_Suite.SearchByRagisteredUser_FromXL"/>
+            <class name="Regression_Suite.SearchByRagisteredUser_FromXL"/>-->
         </classes>
     </test>
 </suite>

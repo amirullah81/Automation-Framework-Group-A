@@ -1,7 +1,5 @@
 package util;
 
-import base.CommonAPI;
-
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.sql.*;
@@ -10,18 +8,18 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * Created by A S M Amirullah on 5/1/2016.
+ * Created by rrt on 5/1/2016.
  */
 public class DBConnect {
     private Connection connect = null;
     private Statement statement = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
-    List<String> list = new ArrayList<String>();
+    // List<String> list = new ArrayList<String>();
 
     public static Properties loadPropertiesFile()throws Exception{
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("Generic/lib/MySQL.properties");
+        InputStream ism = new FileInputStream("C:\\Users\\rrt\\IdeaProjects\\MoonShot\\Generic\\lib\\MySQL.properties");
         prop.load(ism);
         ism.close();
 
@@ -39,12 +37,12 @@ public class DBConnect {
         Class.forName(driverClass);
         // Setup the connection with the DB
         connect = DriverManager.getConnection(url, userName, passWord);
-        CommonAPI.logger.info("database connected");
-        System.out.println("Database connected");
+        // CommonAPI.logger.info("database connected");
+        // System.out.println("Database connected");
 
     }
 
-    public List<String> readDataBase() throws Exception {
+    public List<String> readDataBase(String tableName, String columnName) throws Exception {
         List<String> data = new ArrayList<String>();
         try {
 
@@ -53,35 +51,26 @@ public class DBConnect {
             statement = connect.createStatement();
             // Result set get the result of the SQL query
             resultSet = statement
-                    .executeQuery("select * from member");
-            getResultSetData(resultSet);
+                    .executeQuery("select * from "+ tableName);
+            data = getResultSetData(resultSet, columnName);
         } catch (Exception e) {
             throw e;
         } finally {
             close();
         }
 
-        return list;
+        return data;
     }
     public void queryDatabase(){
 
     }
 
-    private List<String> getResultSetData(ResultSet resultSet) throws SQLException {
+    private List<String> getResultSetData(ResultSet resultSet,String columnName) throws SQLException {
         List<String> dataList = new ArrayList<String>();
         while (resultSet.next()) {
-            String MemberId = resultSet.getString("MemberID");
-            String Name = resultSet.getString("Name");
-            String DOB = resultSet.getString("DOB");
-            String MedicalPlan = resultSet.getString("MedicalPlan");
-            String EffectiveDate = resultSet.getString("EffectiveDate");
+            String itemName = resultSet.getString(columnName);
 
-            dataList.add(MemberId);
-            dataList.add(Name);
-            dataList.add(DOB);
-            dataList.add(MedicalPlan);
-            dataList.add(EffectiveDate);
-
+            dataList.add(itemName);
 
         }
 
@@ -89,8 +78,8 @@ public class DBConnect {
     }
     private void writeResultSetToConsole(ResultSet resultSet) throws SQLException {
         while (resultSet.next()) {
-            String memberID = resultSet.getString("MemberID");
-            System.out.println("MemberID: " + memberID);
+            String itemName = resultSet.getString("NewsTitle");
+            System.out.println("News Title: " + itemName);
         }
 
     }
