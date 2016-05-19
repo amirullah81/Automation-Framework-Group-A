@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Healthfirst App running on Firefox Browser">
+
+    <parameter name="useCloud" value="false"/>
+    <parameter name="userName" value="amirullah"/>
+    <parameter name="accessKey" value="8e843701-e234-420e-ad78-b1064ab3c5ae"/>
+    <parameter name="os" value="Windows 10"/>
+    <parameter name="url" value="http://healthfirst.org/"/>
+    <parameter name="browserName" value="firefox"/>
+    <parameter name="browserVersion" value="45.0"/>
+
+
+
+    <test name="Home Page">
+        <classes>
+            <!--<class name="homePage.MainMenu"/>-->
+           <!-- <class name="homePage.FindAPlan"/>-->
+        </classes>
+    </test>
+
+    <test name="Member">
+        <!-- <classes>
+              <class name="member.MemberLogIn"/>
+             <class name="member.VerifyAccount"/>
+         </classes>-->
+    </test>
+</suite>
