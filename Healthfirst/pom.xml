@@ -44,7 +44,7 @@
     </build>
 
     <properties>
-        <HealthfirstAppRunner>HealthfirstTestRunner.xml</HealthfirstAppRunner>
+        <HealthfirstAppRunner>HealthfirstTestRunnerFirefox.xml</HealthfirstAppRunner>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>

@@ -10,18 +10,18 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * Created by A S M Amirullah on 5/10/2016.
+ * Created by A S M Amirullah on 5/1/2016.
  */
-class DBConnect {
+public class DBConnect {
     private Connection connect = null;
     private Statement statement = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
-    // List<String> list = new ArrayList<String>();
+    List<String> list = new ArrayList<String>();
 
     public static Properties loadPropertiesFile()throws Exception{
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("(path)C:\\Users\\...\\IdeaProjects\\MoonShot\\Generic\\lib\\MySQL.properties");
+        InputStream ism = new FileInputStream("Generic/lib/MySQL.properties");
         prop.load(ism);
         ism.close();
 
@@ -40,11 +40,11 @@ class DBConnect {
         // Setup the connection with the DB
         connect = DriverManager.getConnection(url, userName, passWord);
         CommonAPI.logger.info("database connected");
-        // System.out.println("Database connected");
+        System.out.println("Database connected");
 
     }
 
-    public List<String> readDataBase(String tableName, String columnName) throws Exception {
+    public List<String> readDataBase() throws Exception {
         List<String> data = new ArrayList<String>();
         try {
 
@@ -53,26 +53,35 @@ class DBConnect {
             statement = connect.createStatement();
             // Result set get the result of the SQL query
             resultSet = statement
-                    .executeQuery("select * from "+ tableName);
-            data = getResultSetData(resultSet, columnName);
+                    .executeQuery("select * from member");
+            getResultSetData(resultSet);
         } catch (Exception e) {
             throw e;
         } finally {
             close();
         }
 
-        return data;
+        return list;
     }
     public void queryDatabase(){
 
     }
 
-    private List<String> getResultSetData(ResultSet resultSet,String columnName) throws SQLException {
+    private List<String> getResultSetData(ResultSet resultSet) throws SQLException {
         List<String> dataList = new ArrayList<String>();
         while (resultSet.next()) {
-            String itemName = resultSet.getString(columnName);
+            String MemberId = resultSet.getString("MemberID");
+            String Name = resultSet.getString("Name");
+            String DOB = resultSet.getString("DOB");
+            String MedicalPlan = resultSet.getString("MedicalPlan");
+            String EffectiveDate = resultSet.getString("EffectiveDate");
 
-            dataList.add(itemName);
+            dataList.add(MemberId);
+            dataList.add(Name);
+            dataList.add(DOB);
+            dataList.add(MedicalPlan);
+            dataList.add(EffectiveDate);
+
 
         }
 
@@ -80,8 +89,8 @@ class DBConnect {
     }
     private void writeResultSetToConsole(ResultSet resultSet) throws SQLException {
         while (resultSet.next()) {
-            String itemName = resultSet.getString("NewsTitle");
-            System.out.println("News Title: " + itemName);
+            String memberID = resultSet.getString("MemberID");
+            System.out.println("MemberID: " + memberID);
         }
 
     }

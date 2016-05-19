@@ -57,7 +57,7 @@
     </dependencyManagement>
 
     <!--Profiling for jenkins server-->
-    <!--<profiles>
+    <profiles>
         <profile>
             <id>default</id>
             <activation>
@@ -74,6 +74,6 @@
                 <module>Healthfirst</module>
             </modules>
         </profile>
-    </profiles>-->
+    </profiles>
 
 </project>
