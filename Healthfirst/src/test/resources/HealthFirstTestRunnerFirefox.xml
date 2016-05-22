@@ -3,8 +3,8 @@
 <suite name="Healthfirst App running on Firefox Browser">
 
     <parameter name="useCloud" value="true"/>
-    <parameter name="userName" value="amirullah"/>
-    <parameter name="accessKey" value="8e843701-e234-420e-ad78-b1064ab3c5ae"/>
+    <parameter name="userName" value="ummezahrasyeda"/>
+    <parameter name="accessKey" value="4b9dc9cf-9bbb-4069-b000-a544cf347ee3"/>
     <parameter name="os" value="Windows 10"/>
     <parameter name="url" value="http://healthfirst.org/"/>
     <parameter name="browserName" value="firefox"/>
@@ -13,10 +13,10 @@
 
 
     <test name="Home Page">
-        <classes>
+        <!--<classes>
             <class name="homePage.MainMenu"/>
             <class name="homePage.FindAPlan"/>
-        </classes>
+        </classes>-->
     </test>
 
     <test name="Member">

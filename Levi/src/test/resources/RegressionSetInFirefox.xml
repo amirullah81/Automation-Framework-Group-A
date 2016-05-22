@@ -3,13 +3,13 @@
 <suite name="Levi App running on firefox Browser">
 
 
-    <parameter name="usecloud" value="true"/>
-    <parameter name="userName" value="amirullah"/>
-    <parameter name="accessKey" value="8e843701-e234-420e-ad78-b1064ab3c5ae"/>
+    <parameter name="useCloud" value="true"/>
+    <parameter name="userName" value="ummezahrasyeda"/>
+    <parameter name="accessKey" value="4b9dc9cf-9bbb-4069-b000-a544cf347ee3"/>
     <parameter name="os" value="Windows 10"/>
     <parameter name="url" value="http://www.levi.com/US/en_US/"/>
     <parameter name="browserName" value="firefox"/>
-    <parameter name="browserversion" value="40"/>
+    <parameter name="browserVersion" value="40"/>
 
     <test name="Home Page">
         <classes>

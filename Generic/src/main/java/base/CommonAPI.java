@@ -37,13 +37,13 @@ public class CommonAPI {
 
     public WebDriver driver = null;
     public static Logger logger = LogManager.getLogger(CommonAPI.class);
-    @Parameters({"usecloud","userName","accessKey","os","browserName","browserVersion","url"})
+    @Parameters({"useCloud","userName","accessKey","os","browserName","browserVersion","url"})
     @BeforeMethod
-    public void setUp(@Optional("false") boolean usecloud,@Optional("rahmanww") String userName,@Optional("")
+    public void setUp(@Optional("false") boolean useCloud,@Optional("rahmanww") String userName,@Optional("")
             String accessKey, @Optional("Windows 8") String os,@Optional("firefox") String browserName,@Optional("34")
                               String browserVersion,@Optional("http://www.cnn.com") String url)throws IOException {
         BasicConfigurator.configure();
-        if(usecloud==true){
+        if(useCloud==true){
             //run in cloud
             getCloudDriver(userName,accessKey,os,browserName,browserVersion);
             logger.setLevel(Level.INFO);
