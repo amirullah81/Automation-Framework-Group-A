@@ -64,7 +64,10 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
+                <module>Generic</module>
                 <module>Healthfirst</module>
+                <module>Facebook</module>
+                <module>Levi</module>
             </modules>
         </profile>
         <profile>
@@ -72,6 +75,20 @@
             <modules>
                 <module>Generic</module>
                 <module>Healthfirst</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>facebook-app</id>
+            <modules>
+                <module>Generic</module>
+                <module>Facebook</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>levi-app</id>
+            <modules>
+                <module>Generic</module>
+                <module>Levi</module>
             </modules>
         </profile>
     </profiles>

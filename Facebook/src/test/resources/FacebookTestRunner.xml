@@ -6,7 +6,7 @@
     <parameter name="userName" value="amirullah"/>
     <parameter name="accessKey" value="8e843701-e234-420e-ad78-b1064ab3c5ae"/>
     <parameter name="os" value="Windows 10"/>
-    <parameter name="url" value="http://healthfirst.org/"/>
+    <parameter name="url" value="https://www.facebook.com"/>
     <parameter name="browserName" value="firefox"/>
     <parameter name="browserVersion" value="45.0"/>
 
@@ -14,8 +14,11 @@
 
     <test name="Home Page">
         <classes>
-            <!--<class name="homePage.MainMenu"/>-->
-           <!-- <class name="homePage.FindAPlan"/>-->
+            <class name="facebookTest.FBlogin"/>
+            <class name="facebookTest.UpdateStatus"/>
+            <class name="facebookTest.MassageSend"/>
+            <class name="facebookTest.SearchByName"/>
+
         </classes>
     </test>
 
