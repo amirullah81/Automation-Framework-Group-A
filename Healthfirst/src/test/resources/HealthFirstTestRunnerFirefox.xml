@@ -13,10 +13,10 @@
 
 
     <test name="Home Page">
-        <!--<classes>
+        <classes>
             <class name="homePage.MainMenu"/>
             <class name="homePage.FindAPlan"/>
-        </classes>-->
+        </classes>
     </test>
 
     <test name="Member">
