@@ -4,8 +4,8 @@
 
 
     <parameter name="usecloud" value="false"/>
-    <parameter name="userName" value="rahmanww"/>
-    <parameter name="accessKey" value="6f132866-de72-43fd-b49a-e6f81d26bfe3"/>
+    <parameter name="userName" value="amirullah"/>
+    <parameter name="accessKey" value="8e843701-e234-420e-ad78-b1064ab3c5ae"/>
     <parameter name="os" value="Windows 10"/>
     <parameter name="url" value="http://www.levi.com/US/en_US/"/>
     <parameter name="browserName" value="firefox"/>
@@ -16,7 +16,7 @@
             <class name="Regression_Suite.LoginAndLogout"/>
             <class name="Regression_Suite.SearchByAnyUser"/>
             <class name="Regression_Suite.SearchByRagisteredUser"/>
-            <class name="Regression_Suite.SearchByRagisteredUser_FromXL"/>
+           <!-- <class name="Regression_Suite.SearchByRagisteredUser_FromXL"/>-->
         </classes>
     </test>
 </suite>

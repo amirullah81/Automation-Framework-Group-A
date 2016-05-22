@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Healthfirst App running on Firefox Browser">
 
-    <parameter name="useCloud" value="false"/>
+    <parameter name="useCloud" value="true"/>
     <parameter name="userName" value="amirullah"/>
     <parameter name="accessKey" value="8e843701-e234-420e-ad78-b1064ab3c5ae"/>
     <parameter name="os" value="Windows 10"/>
