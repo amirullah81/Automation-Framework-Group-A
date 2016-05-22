@@ -45,7 +45,7 @@
     </build>
 
     <properties>
-        <leviAppRunner>LeviTestRunner.xml</leviAppRunner>
+        <leviAppRunner>RegressionSetInFirefox.xml</leviAppRunner>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
