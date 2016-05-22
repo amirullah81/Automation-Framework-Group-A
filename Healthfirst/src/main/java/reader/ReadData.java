@@ -12,7 +12,7 @@ import java.util.List;
 public class ReadData {
 
     DataReader dataReader = new DataReader();
-    DBConnect dbConnect = new DBConnect();
+//    DBConnect dbConnect = new DBConnect();
 
     public String[][] getLogInDataFromExcelFile()throws IOException{
         String path = System.getProperty("user.dir")+"\\data\\login.xls";
@@ -32,8 +32,8 @@ public class ReadData {
         return planData;
     }
 
-    public List<String> getDataFromDB()throws IOException,Exception{
-        List<String>memberInfo=dbConnect.readDataBase();
-        return memberInfo;
-    }
+//    public List<String> getDataFromDB()throws IOException,Exception{
+//        List<String>memberInfo=dbConnect.readDataBase();
+//        return memberInfo;
+//    }
 }
