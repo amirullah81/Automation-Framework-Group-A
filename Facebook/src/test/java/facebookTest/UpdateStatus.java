@@ -1,20 +1,17 @@
 package facebookTest;
 
-import base.CommonAPI;
+import logInOut.LogInLogOut;
 import org.testng.annotations.Test;
 
 /**
  * Created by Syeda on 5/22/2016.
  */
-public class UpdateStatus extends CommonAPI {
+public class UpdateStatus extends LogInLogOut {
     @Test
     public void status_update()throws InterruptedException{
 
-        typeByID("email", "adhora_hossen@yahoo.com");
-        typeByID("pass", "01912058756");
-        clickByID("u_0_y");
-        Thread.sleep(2000);
-        System.out.println("Login Successfully");
+        logIn();
+        sleepFor(3);
 
         typeByCss(".uiTextareaAutogrow._3en1","test");
 //        clickByLinkText("Post");
@@ -22,5 +19,6 @@ public class UpdateStatus extends CommonAPI {
         Thread.sleep(2000);
 //	 String expectedName = "test";
 //	assertEquals(expectedName, driver.findElement(By.cssSelector("#js_4")).getText());
+        logOut();
     }
 }
